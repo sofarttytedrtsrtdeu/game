@@ -1,0 +1,212 @@
+[gd_scene load_steps=27 format=3 uid="uid://cqnfk50vl2o51"]
+
+[ext_resource type="Texture2D" uid="uid://dbiwyiivl3ir3" path="res://Godot/Мим/Cacodaemon Sprite Sheet.png" id="1_pqmi6"]
+[ext_resource type="Script" path="res://Godot/мим.gd" id="1_xfsnl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk36e"]
+radius = 15.0
+height = 50.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0043i"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g42q2"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cucs4"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8nhy"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogno7"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvowi"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njlym"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grxty"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ifx"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iluju"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk77u"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejsqe"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdnum"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(384, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3gao"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(448, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4hur"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4yfu"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voiro"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(320, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhqa8"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(384, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoamf"]
+atlas = ExtResource("1_pqmi6")
+region = Rect2(448, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ov6qg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0043i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g42q2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cucs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8nhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogno7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvowi")
+}],
+"loop": true,
+"name": &"бегает",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njlym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grxty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ifx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iluju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk77u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejsqe")
+}],
+"loop": true,
+"name": &"бьёт",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdnum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3gao")
+}],
+"loop": true,
+"name": &"спит",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4hur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4yfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voiro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhqa8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoamf")
+}],
+"loop": false,
+"name": &"умирает",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_akauu"]
+radius = 126.004
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_150if"]
+size = Vector2(26, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlcqg"]
+size = Vector2(34, 17)
+
+[node name="Мим" type="CharacterBody2D"]
+script = ExtResource("1_xfsnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_hk36e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.03125, 1)
+sprite_frames = SubResource("SpriteFrames_ov6qg")
+animation = &"умирает"
+autoplay = "спит"
+frame = 4
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_akauu")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_150if")
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(-1, 10.5)
+shape = SubResource("RectangleShape2D_dlcqg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
