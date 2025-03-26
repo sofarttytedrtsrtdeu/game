@@ -110,8 +110,8 @@ func combo1():
 	await anim.animation_finished
 	combo = false
 
-	func _on_animated_sprite_2d_animation_finished() -> void:
-		if anim.animation == "Атака":
-			state = стоит
-		if anim.animation == "Атака2":
-			state = стоит
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if anim.animation == "Атака":
+		state = стоит
+	if anim.animation == "Атака2":
+		state = стоит
