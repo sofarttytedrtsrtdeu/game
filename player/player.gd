@@ -11,6 +11,7 @@ enum {
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const jump = 450
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,7 +35,7 @@ func _physics_process(delta):
 		кувырок:
 			somersault_state()
 		прыжок:
-			pass
+			jump_sate()
 		стоит:
 			move_state()
 	
@@ -43,11 +44,16 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle Jump.
 	if Input.is_action_just_pressed("Прыжок") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		anim.play("падает с высоты")
+	move_and_slide()
 
+func jump_sate():
+	if Input.is_action_just_pressed("Прыжок") and is_on_floor():
+		velocity.y = -jump
+		$"прыжок".stream = load("res://sounds/для игры(2).mp3")
+		$"прыжок".play()
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 
@@ -61,7 +67,7 @@ func _physics_process(delta):
 		await anim.animation_finished
 		queue_free()
 		get_tree().change_scene_to_file("res://меню.tscn")
-	move_and_slide()
+	
 
 func move_state():
 	var direction = Input.get_axis("Влево", "Вправо")
@@ -103,7 +109,9 @@ func attack_state():
 	
 func attack2_state():
 	velocity.x = 0
+	# print(anim.animation)
 	anim.play("Атака 2")
+	
 	
 func combo1():
 	combo = true
@@ -113,5 +121,6 @@ func combo1():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if anim.animation == "Атака":
 		state = стоит
-	if anim.animation == "Атака2":
+	if anim.animation == "Атака 2":
 		state = стоит
+

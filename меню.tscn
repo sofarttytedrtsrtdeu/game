@@ -11,6 +11,7 @@ offset_left = 413.0
 offset_top = 216.0
 offset_right = 746.0
 offset_bottom = 298.0
+theme_override_font_sizes/font_size = 20
 text = "Play
 "
 
@@ -19,9 +20,17 @@ offset_left = 415.0
 offset_top = 357.0
 offset_right = 748.0
 offset_bottom = 439.0
+theme_override_font_sizes/font_size = 20
 text = "Quit"
 
 [node name="BG" parent="." instance=ExtResource("2_vsbh0")]
 
+[node name="settings" type="Button" parent="."]
+offset_right = 143.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 20
+text = "Settings"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt357th7cxgwv"
+path="res://.godot/imported/для игры(2).mp3-30cf5151d0c046278ca85cc2018ff618.mp3str"
+
+[deps]
+
+source_file="res://sounds/для игры(2).mp3"
+dest_files=["res://.godot/imported/для игры(2).mp3-30cf5151d0c046278ca85cc2018ff618.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
